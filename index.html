@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try Different Puzzle</title>
+	<link rel="shortcut icon" href="css/ico.png">
+	<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+  	<script type="text/javascript" src="js/jquery-ui.js"></script>	
+	<script type="text/javascript" src="js/shapes.js"></script>
+	<!--script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/gliphicon.css">
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+	
+	<meta charset="UTF-8">
+	
+	
+
+
+</head>
+<body>
+<div class="wrapper" >
+	<div class="menu">
+		<div>
+			<p>
+				<h1>Try Different Puzzle</h1>
+			</p>
+		</div>
+		<hr>
+		<div class="form">
+				<h2>
+					Set number of tiles and square dimensions
+				</h2>
+			<form onsubmit="return false;" id='form'>
+				<div class = 'inputs'>
+					<span class="widthHeight">Table Width</span>
+					<input id="inputWidth"  type="text"   value="4"></input><br>
+					<span class="widthHeight">Table Height</span>
+					<input id="inputHeight" type="text"   value="4"></input><br>
+					<span class="widthHeight">Square Dimensions</span>
+					<input id="squareDimension" type="text"   value="60"></input>
+				</div>				
+			</form>
+				
+		</div>
+		<div style="clear:both;"></div>		
+	</div>
+
+	<div class = 'buttons'>	
+		<button class="makeBoard" id='makeBoard' form="form">
+			Make new <br>board 
+			<span class="glyphicon glyphicon-play"></span>
+		</button>
+		<button class="makeBoard" id='restart' form="form">
+			Restart
+			<span class="glyphicon glyphicon-repeat"></span>			
+		</button>
+	</div>
+
+	<div class='sandbox'>
+		<div class='board'></div>
+		<script type="text/javascript">
+			$( ".sandbox" ).droppable()
+		</script>
+	</div>
+
+
+	
+	<div class="shapesWrap">	
+			<h2>Choose shapes (Drag & Drop to Board)</h2>
+			<div class="description">
+				<div>
+					<h3>Welcome to</h3>
+					<h2>Try Different Puzzle</h2>
+					<ul><strong>How to play:</strong>
+						<li>Set number of tiles in width and height of a board (it is possible, just click on the number) and press button "Make new board" (bootom/left). </li>
+						<li>Drag and drop Shapes onto the board.</li>
+						<li>Each shape can be put only on empty tiles</li>
+						<li>If you need some place to put some shapes temporarily use sandbox ribbon</li>
+						<li>When you are done with initial level try changing number of rows and columns (up) and lower tile dimensions </li>
+						
+					</ul>
+					<br>
+					<br>
+					<li>
+						<strong>The goal of the game is to find out is there a solution to a given puzzle!</strong>
+					</li>
+				</div>
+			
+			</div>
+			
+
+
+    	
+	</div>
+	<div style="clear:both;"></div>
+
+	<!-- <div class='board'></div> -->
+	
+	
+</div>
+<script type="text/javascript">
+
+//script to make Board for cleaning
+$(document).ready(function() {
+
+	$('.makeBoard').click(function() {
+	// if board is alredy initialised delete all of its content (only on restart of game)
+    if(typeof board != "undefined"){
+      $(".board").html("")
+      // remove all shape containers
+      $('.shapesWrap').find('.shapeContainer').remove()
+    }
+    $(".description").slideUp()
+    	// initialise new board object with data taken from form fields
+		board = new Board($('#inputWidth').val(),$('#inputHeight').val(),$('#squareDimension').val())
+		// draw board
+		board.makeBoard()
+		// draw tiles
+		board.makeTiles()
+		// initialise new shape object
+    	shapes = new Shape(board)
+    	// draw all neccesary shapes
+    	shapes.allShapeFunct()
+	})
+})
+
+</script>
+</body>
+</html>

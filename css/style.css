@@ -1,0 +1,256 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html, body{
+	height: 100%;
+	font-family: 'Indie Flower', cursive;	
+}
+hr{
+	margin: 10px 5px; 
+
+}
+h2, h3{
+	text-align: center;
+	padding: 10px;
+	padding-top: 5px;
+	font-family: 'Luckiest Guy', cursive;	
+}
+
+.wrapper{
+	min-height: 100%;
+	background-color: gray;
+	text-align: center;
+}
+
+		
+	
+/*MENU*/
+.menu{
+	width:100%;
+	height: auto;
+	background-color: black;
+	opacity: 0.7;
+	text-align: center;
+	color: white;	
+}
+.form{
+	margin: auto;
+	padding-left: 20px;
+	text-align: left;
+}
+.form h2{
+	float: left;
+	width:150px;
+	height: 60px;
+	font-size: 16px;
+	background-color: green;
+	border-radius: 20px;
+}
+.inputs{
+	display: inline-block;
+	width:240px;
+	height: 60px;
+	font-size: 16px;
+	text-align: right;
+	border-radius: 20px;
+	margin-left: 10px;
+}
+input{
+	margin-left: 5px;
+	width:25px;
+	background-color: inherit;
+	font-family: inherit;
+	color: white;
+	border: 0px;
+}
+.buttons{
+}
+
+/*--MENU*/
+
+/*SHAPES*/
+.shapesWrap{
+	margin: auto;
+	text-align: center;
+	padding: 5px;
+}
+.sandbox{
+	/*display:inline-block;
+	min-width: auto;*/
+	height:auto;
+	padding: 20px;
+	text-align: center;
+	background-color: Tan;
+}
+.shapeContainer{
+	display:inline-block;
+	margin: auto;
+}
+.widthHeight{	
+}
+
+/*--SHAPES*/
+
+
+
+/*BOARD*/
+.board{
+	position:relative;
+	z-index: 20;
+	margin: auto;
+}
+
+.tile{	
+	margin: 1px;
+	float:left;	
+	box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.5);
+	z-index: 30;
+}
+
+/*--BOARD*/
+
+
+
+/*DESCRIPTION AND GAME OVER*/
+.description, .gameOver{
+	margin: auto;
+	background-color: black;
+	padding: 20px;
+	color: white;
+	width:400px;
+	height: auto;
+	opacity: 0.5;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: 5px 5px 3px 5px rgba(50, 50, 50, 0.75);
+}
+.description ul {
+	   	list-style-type: none;
+  		padding: 10px;
+  		margin: 0px;
+}
+li{
+	list-style-type: none;
+	padding: 20px;
+}
+li span{
+	color:green;
+	border: 1px solid red;
+}
+.description h2, h3, strong{
+	text-align: center;
+}
+.gameOver{
+	width:inherit;
+	min-width: 250px;
+	height: inherit;
+	position:absolute;
+	top:0;
+	left: -20px;
+	z-index: 500;
+	display: none;
+	opacity: 0.7;
+}
+
+/*--DESCRIPTION AND GAME OVER*/
+
+
+/* This button was generated using CSSButtonGenerator.com */
+#makeBoard {
+	position: fixed;
+	right: 20px;
+	bottom: 0;
+
+	-moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	box-shadow:inset 0px 1px 0px 0px #d9fbbe;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #b8e356), color-stop(1, #a5cc52) );
+	background:-moz-linear-gradient( center top, #b8e356 5%, #a5cc52 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b8e356', endColorstr='#a5cc52');
+	background-color:#b8e356;
+	-webkit-border-top-left-radius:42px;
+	-moz-border-radius-topleft:42px;
+	border-top-left-radius:42px;
+	-webkit-border-top-right-radius:42px;
+	-moz-border-radius-topright:42px;
+	border-top-right-radius:42px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	/*font-family: 'Play', sans-serif;*/
+	font-family: 'Luckiest Guy', cursive;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:59px;
+	/*line-height:9px;*/
+	width:149px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #86ae47;
+}
+#makeBoard:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #a5cc52), color-stop(1, #b8e356) );
+	background:-moz-linear-gradient( center top, #a5cc52 5%, #b8e356 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5cc52', endColorstr='#b8e356');
+	background-color:#a5cc52;
+}
+
+#restart {
+	position: fixed;
+	left: 20px;
+	bottom: 0;
+
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5978e;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f) );
+	background:-moz-linear-gradient( center top, #f24537 5%, #c62d1f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f');
+	background-color:#f24537;
+	-webkit-border-top-left-radius:42px;
+	-moz-border-radius-topleft:42px;
+	border-top-left-radius:42px;
+	-webkit-border-top-right-radius:42px;
+	-moz-border-radius-topright:42px;
+	border-top-right-radius:42px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #83c41a;
+	display:inline-block;
+	color:#ffffff;
+	/*font-family: 'Play', sans-serif;*/
+	font-family: 'Luckiest Guy', cursive;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:59px;
+	/*line-height:59px;*/
+	width:149px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #86ae47;
+}
+#restart:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537) );
+	background:-moz-linear-gradient( center top, #c62d1f 5%, #f24537 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537');
+	background-color:#c62d1f;
+}
+
+/* This button was generated using CSSButtonGenerator.com */
+
+
